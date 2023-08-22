@@ -1,1 +1,1 @@
-# pengolahan_citra
+# pengolahan_citra_digital
