@@ -1,0 +1,36 @@
+{% extends 'layout.html' %} {% block head %}
+<title>Aplikasi PCD</title>
+{% endblock %} {% block body %}
+<main id="indexMain">
+  <section id="section2">
+    <h1>Pengolahan Citra Digital</h1>
+    <div class="programs">
+      <div class="row mt-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Extract RGB</h5>
+            <p class="card-text">
+              Melakukan ekstraksi Channel RGB (Red, Green, Blue) dari suatu
+              citra
+            </p>
+            <a href="extract-rgb" class="btn" style="background-color: #15ff99"
+              >Extract RGB</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Image To Grayscale</h5>
+            <p class="card-text">Mengubah citra menjadi grayscale</p>
+            <a href="grayscale" class="btn" style="background-color: #15ff99"
+              >Image To Grayscale</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

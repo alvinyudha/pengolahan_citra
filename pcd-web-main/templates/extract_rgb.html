@@ -1,0 +1,99 @@
+{% extends 'layout.html' %} {% block head %}
+<title>Extract RGB</title>
+{% endblock %} {% block body %} {% include 'navbar.html' %}
+<main>
+  <section class="d-flex justify-content-center mt-6">
+    <div style="width: 80vw">
+      <div class="row mt-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Upload Image</h5>
+            <p class="card-text"></p>
+            <div class="upload-from">
+              <form method="POST" enctype="multipart/form-data">
+                <input type="file" name="im_file" class="btn" />
+                <button
+                  type="submit"
+                  value="Upload File"
+                  class="btn"
+                  style="background-color: #15ff99"
+                >
+                  Upload File
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-4" style="padding: 0 8px 0 0">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Image Preview</h5>
+              {% if data and data.img %}
+              <img
+                src="data:image/png;base64,{{data.img}}"
+                alt="test"
+                style="width: 100%"
+              />
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        <div class="col-8" style="padding: 0 0 0 8px">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">RGB Channel From Image</h5>
+              {% if data and data.rgb %}
+              <p class="card-text">
+                Berikut adalah hasil ekstrasi piksel RGB pada image
+              </p>
+              <!-- <a href="#" class="btn" style="background-color: #fdfd1f">Pertemuan 1</a> -->
+              <label for="red" style="font-weight: bold" class="mt-4"
+                >Red Channel</label
+              >
+              <textarea
+                name="red"
+                id="red"
+                cols="30"
+                rows="5"
+                style="width: 100%"
+              >
+{{data.rgb[0]}}</textarea
+              >
+              <label for="green" style="font-weight: bold" class="mt-4"
+                >Green Channel</label
+              >
+              <textarea
+                name="green"
+                id="green"
+                cols="30"
+                rows="5"
+                style="width: 100%"
+              >
+{{data.rgb[1]}}</textarea
+              >
+              <label for="blue" style="font-weight: bold" class="mt-4"
+                >Blue Channel</label
+              >
+              <textarea
+                name="blue"
+                id="blue"
+                cols="30"
+                rows="5"
+                style="width: 100%"
+              >
+{{data.rgb[2]}}</textarea
+              >
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script></script>
+</main>
+{% endblock %}
