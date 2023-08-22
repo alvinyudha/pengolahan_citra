@@ -56,6 +56,8 @@ header .logo a {
   overflow-y: auto;
   scroll-snap-type: y mandatory;
   -webkit-overflow-scrolling: touch;
+  background-image: url('bg.png');
+  background-size: 100%;
 }
 
 .header {
