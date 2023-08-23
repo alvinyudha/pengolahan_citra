@@ -57,7 +57,25 @@ header .logo a {
   scroll-snap-type: y mandatory;
   -webkit-overflow-scrolling: touch;
   background-image: url('bg.png');
-  background-size: 100%;
+background-position: 50%;
+}
+
+#rgbMain{
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+  background-color: #b39cd0;
+}
+
+#grayMain{
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+  background-color: #b39cd0;
 }
 
 .header {
